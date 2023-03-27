@@ -1,0 +1,44 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Menu.unity
+    guid: 2c004ca1303469a41a57a20917bd09c3
+  - enabled: 1
+    path: Assets/Scenes/Zumba/Beach.unity
+    guid: d1c3109bdb54ad54c8a2b2838528e640
+  - enabled: 1
+    path: Assets/Scenes/Zumba/Park Zumba.unity
+    guid: 7769f33fb4fa2e5458344a36556ad760
+  - enabled: 1
+    path: Assets/Scenes/Zumba/SnowMountains.unity
+    guid: 80a7b5808b43ae245bc2c97ce3cfc017
+  - enabled: 1
+    path: Assets/Scenes/Minigames/Matching Game.unity
+    guid: 8837b1304d883cd4990d83a2eddb6255
+  - enabled: 1
+    path: Assets/Scenes/Minigames/Jigsaw.unity
+    guid: 9e2dbb09829b2f9479080186fb7d3be8
+  - enabled: 1
+    path: Assets/Scenes/Minigames/Word Scramble.unity
+    guid: 84c39d9dff59cd749adc78a4bc1bb53c
+  - enabled: 1
+    path: Assets/Scenes/Minigames/Find Me/Find Me Hub.unity
+    guid: 747a096bd491f5741b5d84fa9ad91fe1
+  - enabled: 1
+    path: Assets/Scenes/Minigames/Find Me/Harbour Find Me.unity
+    guid: e21e59967b1933d43a5e84a46ab9afe8
+  - enabled: 1
+    path: Assets/Scenes/Minigames/Find Me/Island Find Me.unity
+    guid: 9c63f33617853404eb84883617221486
+  - enabled: 1
+    path: Assets/Scenes/Minigames/Find Me/Park.unity
+    guid: 0e3a36c80ecae2f479cf11a853eff437
+  - enabled: 1
+    path: Assets/Scenes/Minigames/Find Me/New City.unity
+    guid: 3ed2f0201536ec348868b1052de8a5c7
+  m_configObjects: {}
