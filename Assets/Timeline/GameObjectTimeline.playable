@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 579b5dfd2575d474b9fa97cb60201017, type: 3}
-  m_Name: Volumetric Render Track
+  m_Name: lumetric Render Trackck
   m_EditorClassIdentifier: 
   m_Version: 3
   m_AnimClip: {fileID: 0}
@@ -25,7 +25,7 @@ MonoBehaviour:
     m_Start: 0
     m_ClipIn: 0
     m_Asset: {fileID: 3792365557221279007}
-    m_Duration: 6
+    m_Duration: 9.466666666666667
     m_TimeScale: 1
     m_ParentTrack: {fileID: -5689502084994460007}
     m_EaseInDuration: 0
