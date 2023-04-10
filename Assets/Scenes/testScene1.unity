@@ -1245,6 +1245,31 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!1 &381799096 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 523990875, guid: 019b917704c3c29478d778e143d411d2, type: 3}
+  m_PrefabInstance: {fileID: 847802396}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &381799100
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 381799096}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cbc45a0e5467b454e9810596c825e697, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scriptObject: {fileID: 11400000, guid: d0b582b5d6988364091c2ea7d786d632, type: 2}
+  inOrderAction: []
+  currentTrackedPoints: []
+  closestTrackedPoints: []
+  currentTrackedPointsTimer: []
+  accuracyList: []
+  timer: 0
+  index: 0
 --- !u!1 &387874708
 GameObject:
   m_ObjectHideFlags: 0
