@@ -1270,6 +1270,24 @@ MonoBehaviour:
   accuracyList: []
   timer: 0
   index: 0
+  started: 1
+  subTimer: 0
+  recentAccuracyCount: 0
+  averageRecentAccuracy: 0
+  accuracyTimeInterval: 5
+--- !u!114 &381799105
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 381799096}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d973dbfb6fd6854c9aaaae585fb40bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  zpl: {fileID: 11400000, guid: d0b582b5d6988364091c2ea7d786d632, type: 2}
 --- !u!1 &387874708
 GameObject:
   m_ObjectHideFlags: 0
@@ -2744,7 +2762,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 210279053, guid: 019b917704c3c29478d778e143d411d2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 0.017
       objectReference: {fileID: 0}
     - target: {fileID: 210279053, guid: 019b917704c3c29478d778e143d411d2, type: 3}
       propertyPath: m_LocalPosition.y
@@ -4628,7 +4646,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: testScene2
+          m_StringArgument: testScene3
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1746746128
