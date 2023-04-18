@@ -5978,6 +5978,7 @@ MonoBehaviour:
   song3Sitting: {fileID: 775052043}
   song4Sitting: {fileID: 256265068}
   song5Sitting: {fileID: 634233151}
+  MyScriptReference: {fileID: 0}
   song1StandingAudio: {fileID: 0}
   song2StandingAudio: {fileID: 0}
   song3StandingAudio: {fileID: 0}

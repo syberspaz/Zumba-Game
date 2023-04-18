@@ -17,9 +17,10 @@ public class HandTrackingV2 : MonoBehaviour
     public int recentAccuracyCount;
     public float averageRecentAccuracy;
     public float accuracyTimeInterval = 5;
+    public int moveTracker = 0;
     private void Start()
     {
-        inOrderAction = new List<Vector4>(GetComponent<PointChanger>().points[0].actionList);
+        inOrderAction = new List<Vector4>(GetComponent<PointChanger>().points[moveTracker].actionList);
 
     }
     private void Update()

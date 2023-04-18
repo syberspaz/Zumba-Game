@@ -20,6 +20,7 @@ public class ZumbaController : MonoBehaviour
     public GameObject song3Sitting;
     public GameObject song4Sitting;
     public GameObject song5Sitting;
+    public HandTrackingV2 MyScriptReference;
     public AudioSource song1StandingAudio;
     public AudioSource song2StandingAudio;
     public AudioSource song3StandingAudio;
@@ -36,6 +37,7 @@ public class ZumbaController : MonoBehaviour
     public float songTimer = 3;
     public TextMeshProUGUI score;
     public TextMeshProUGUI results;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -52,6 +54,10 @@ public class ZumbaController : MonoBehaviour
         song3SittingAudio = song3Sitting.gameObject.GetComponent<AudioSource>();
         song4SittingAudio = song4Sitting.gameObject.GetComponent<AudioSource>();
         song5SittingAudio = song5Sitting.gameObject.GetComponent<AudioSource>();
+        HandTrackingV2 MyScriptReference = GetComponent<HandTrackingV2>();
+
+
+
     }
 
     // Update is called once per frame
@@ -67,6 +73,8 @@ public class ZumbaController : MonoBehaviour
                     {
                         song1Standing.gameObject.SetActive(true);
                         //set variable for changing moves within here
+                        MyScriptReference.moveTracker = 0;
+
                         if (!song1StandingAudio.isPlaying)
                         {
                             songTimer -= Time.deltaTime;
@@ -97,6 +105,7 @@ public class ZumbaController : MonoBehaviour
                     if (Menu.isStanding)
                     {
                         song2Standing.gameObject.SetActive(true);
+                        MyScriptReference.moveTracker = 1;
                         if (!song2StandingAudio.isPlaying)
                         {
                             songTimer -= Time.deltaTime;
@@ -127,6 +136,7 @@ public class ZumbaController : MonoBehaviour
                     if (Menu.isStanding)
                     {
                         song3Standing.gameObject.SetActive(true);
+                        MyScriptReference.moveTracker = 2;
                         if (!song3StandingAudio.isPlaying)
                         {
                             songTimer -= Time.deltaTime;
@@ -157,6 +167,7 @@ public class ZumbaController : MonoBehaviour
                     if (Menu.isStanding)
                     {
                         song4Standing.gameObject.SetActive(true);
+                        MyScriptReference.moveTracker = 3;
                         if (!song4StandingAudio.isPlaying)
                         {
                             songTimer -= Time.deltaTime;
@@ -187,6 +198,7 @@ public class ZumbaController : MonoBehaviour
                     if (Menu.isStanding)
                     {
                         song5Standing.gameObject.SetActive(true);
+                        MyScriptReference.moveTracker = 4;
                         if (!song5StandingAudio.isPlaying)
                         {
                             songTimer -= Time.deltaTime;
