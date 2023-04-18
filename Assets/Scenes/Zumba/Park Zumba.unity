@@ -5978,7 +5978,6 @@ MonoBehaviour:
   song3Sitting: {fileID: 775052043}
   song4Sitting: {fileID: 256265068}
   song5Sitting: {fileID: 634233151}
-  MyScriptReference: {fileID: 0}
   song1StandingAudio: {fileID: 0}
   song2StandingAudio: {fileID: 0}
   song3StandingAudio: {fileID: 0}
@@ -6079,7 +6078,6 @@ GameObject:
   - component: {fileID: 1248175506}
   - component: {fileID: 1248175505}
   - component: {fileID: 1248175504}
-  - component: {fileID: 1248175503}
   m_Layer: 0
   m_Name: Camera
   m_TagString: Untagged
@@ -6087,18 +6085,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1248175503
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1248175502}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: be76e5f14cfee674cb30b491fb72b09b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1248175504
 MonoBehaviour:
   m_ObjectHideFlags: 0
