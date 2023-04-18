@@ -41,13 +41,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Minigames/Find Me/New City.unity
     guid: 3ed2f0201536ec348868b1052de8a5c7
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/testScene1.unity
     guid: dff366607d8bbd44cb06e7806801225a
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/testScene2.unity
     guid: 7eeebafc1cb3c0f45add2d3ff175c0d8
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/testScene3.unity
     guid: 65ba429fca4417542b9369007ab677d5
   m_configObjects: {}
