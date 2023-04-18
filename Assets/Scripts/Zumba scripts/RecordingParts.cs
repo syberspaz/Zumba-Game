@@ -19,6 +19,6 @@ public class RecordingParts : MonoBehaviour
     private void FixedUpdate()
     {
         timer += Time.fixedDeltaTime;
-        zpl.actionList.Add(new Vector4(transform.position.x, transform.position.y, transform.position.z, timer));
+        zpl.actionList.Add(new Vector4(transform.localPosition.x, transform.localPosition.y, transform.localPosition.z, timer));
     }
 }

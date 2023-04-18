@@ -66,6 +66,7 @@ public class ZumbaController : MonoBehaviour
                     if (Menu.isStanding)
                     {
                         song1Standing.gameObject.SetActive(true);
+                        //set variable for changing moves within here
                         if (!song1StandingAudio.isPlaying)
                         {
                             songTimer -= Time.deltaTime;
