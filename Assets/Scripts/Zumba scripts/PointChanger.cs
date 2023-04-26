@@ -4,16 +4,8 @@ using UnityEngine;
 
 public class PointChanger : MonoBehaviour
 {
-    public List<ZumbaPointList> points;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+  public List<ZumbaPointList> pointList;
+  public ZumbaPointList GetSongPointList(int index) {
+    return pointList[index];
+  }
 }
