@@ -4,7 +4,10 @@ using UnityEngine;
 
 public static class Score {
   public static float findMeTimeAverage;
-  public static float findMeErrorCount;
+  public static int findMeErrorCount;
+  public static float matchingCardTimer;
+  public static int matchingCardErrorCount;
+  public static float wordScrambleTime;
   public static float a;
   public static float b;
   public static float c;

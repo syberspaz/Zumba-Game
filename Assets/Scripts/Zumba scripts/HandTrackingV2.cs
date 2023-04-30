@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class HandTrackingV2 : MonoBehaviour {
   public ZumbaPointList scriptObject;
@@ -17,12 +18,15 @@ public class HandTrackingV2 : MonoBehaviour {
   public float averageRecentAccuracy;
   public float accuracyTimeInterval = 5;
   public int moveTracker = 0;
+
+  public AverageRecentRating ARR;
+
   private void Start() {
     inOrderAction = new List<Vector4>(GetComponent<PointChanger>().pointList[moveTracker].actionList);
 
   }
   private void Update() {
-    if (started) {
+    if (started && SceneManager.GetActiveScene() == SceneManager.GetSceneAt(Menu.background)) {
       timer += Time.deltaTime;
       if (inOrderAction.Count > index) {
         if (timer > inOrderAction[index].w - 1) {
@@ -49,6 +53,11 @@ public class HandTrackingV2 : MonoBehaviour {
           if (subTimer >= accuracyTimeInterval) {
             subTimer = 0;
             averageRecentAccuracy = averageRecentAccuracy / recentAccuracyCount;
+            if (ARR == null) {
+              ARR = GameObject.Find("Manager").GetComponent<AverageRecentRating>();
+            }
+            ARR.average += averageRecentAccuracy;
+            ARR.jointCount += 1;
             // RECENT ACCURACY OUTPUT IN A DECIMAL FORMAT (IE 0.0 - 1.0 is 0 to  100%)
             //INSERT STAR CODE HERE
 
