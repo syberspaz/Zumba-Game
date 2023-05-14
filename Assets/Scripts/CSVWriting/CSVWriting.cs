@@ -1,4 +1,5 @@
 using System.Collections;
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
@@ -22,16 +23,19 @@ public class CSVWriting : MonoBehaviour {
   public void WriteCSV() {
     if (instantiate) {
       tw = new StreamWriter(fileName, false);
-      tw.WriteLine("score 1,score 2,score 3,score 4");
+      tw.WriteLine("ID,Date,Find Me Time Average,Find Me Error Count,Matching Card Time,Matching Card Error Count,Word Scramble Time (-1 is a skip)");
       tw.Close();
       instantiate = false;
     }
     tw = new StreamWriter(fileName, true);
 
-    tw.WriteLine(Score.a + "," +
-      Score.a + "," +
-      Score.a + "," +
-      Score.a + ",");
+    tw.WriteLine(Score.ID + "," +
+      DateTime.Today + "," +
+      Score.findMeTimeAverage + "," +
+      Score.findMeErrorCount + "," +
+      Score.matchingCardTimer + "," +
+      Score.matchingCardErrorCount + "," +
+      Score.wordScrambleTime);
 
     tw.Close();
   }
