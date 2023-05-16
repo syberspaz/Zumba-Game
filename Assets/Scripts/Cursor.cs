@@ -7,6 +7,8 @@ using UnityEngine.SceneManagement;
 public class Cursor : MonoBehaviour
 {
     public Transform handPos;
+    public Transform FingerTip;
+    public Transform Thumb;
     public Image cursor;
     public Camera cam;
     public bool isCol;
@@ -28,10 +30,16 @@ public class Cursor : MonoBehaviour
         Ray cursorRay;
         RaycastHit cursorHit;
         cursorRay = cam.ScreenPointToRay(screenPos);
+        Vector3 MousePos = Input.mousePosition;
+        MousePos = handPos.position;
+        {
+            Debug.Log(MousePos.x);
+            Debug.Log(MousePos.y);
+        }
         Debug.DrawRay(cursorRay.origin, cursorRay.direction * 10);
         if (Physics.Raycast(cursorRay, out cursorHit, 10000, cursorMask))
         {
-            hoverTimer += Time.deltaTime;
+            /*hoverTimer += Time.deltaTime;
             if (hoverTimer >= hoverTime)
             {
                 Debug.Log("Hover Complete");
@@ -41,7 +49,7 @@ public class Cursor : MonoBehaviour
                     //SceneManager.LoadScene(7); //load hub
                     SceneManager.LoadScene(Menu.background);
                 }
-            }
+            }*/
         }
         else
         {

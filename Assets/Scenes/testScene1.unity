@@ -645,6 +645,7 @@ MonoBehaviour:
   averageRecentAccuracy: 0
   accuracyTimeInterval: 5
   moveTracker: 0
+  ARR: {fileID: 0}
 --- !u!114 &833861138
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -657,8 +658,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a16f0de729b779143ae2e0b34b40d0d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  points:
-  - {fileID: 11400000, guid: d0b582b5d6988364091c2ea7d786d632, type: 2}
+  pointList: []
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -1182,7 +1182,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Park Zumba
+          m_StringArgument: testScene2
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1746746128
