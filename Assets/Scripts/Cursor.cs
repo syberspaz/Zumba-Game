@@ -7,8 +7,7 @@ using UnityEngine.SceneManagement;
 public class Cursor : MonoBehaviour
 {
     public Transform handPos;
-    public Transform FingerTip;
-    public Transform Thumb;
+    private FindMeManager findMeManager;
     public Image cursor;
     public Camera cam;
     public bool isCol;
@@ -16,10 +15,11 @@ public class Cursor : MonoBehaviour
     public float hoverTimer = 0.0f;
     public float hoverTime = 2.0f;
     public LayerMask cursorMask;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        findMeManager = FindObjectOfType<FindMeManager>();
     }
 
     // Update is called once per frame
@@ -30,26 +30,20 @@ public class Cursor : MonoBehaviour
         Ray cursorRay;
         RaycastHit cursorHit;
         cursorRay = cam.ScreenPointToRay(screenPos);
-        Vector3 MousePos = Input.mousePosition;
-        MousePos = handPos.position;
-        {
-            Debug.Log(MousePos.x);
-            Debug.Log(MousePos.y);
-        }
         Debug.DrawRay(cursorRay.origin, cursorRay.direction * 10);
         if (Physics.Raycast(cursorRay, out cursorHit, 10000, cursorMask))
         {
-            /*hoverTimer += Time.deltaTime;
+            hoverTimer += Time.deltaTime;
             if (hoverTimer >= hoverTime)
             {
-                Debug.Log("Hover Complete");
-                if (FindMeHub.target.ToString() == cursorHit.transform.gameObject.name)
+                /*findMeManager.GetComponent<FindMeObject>().clicked = true;
+
+                if (findMeManager.target.GetComponent<FindMeObject>().clicked)
                 {
                     Debug.Log("Object Selected");
-                    //SceneManager.LoadScene(7); //load hub
-                    SceneManager.LoadScene(Menu.background);
-                }
-            }*/
+                }*/
+                
+            }
         }
         else
         {
