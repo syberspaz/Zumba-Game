@@ -12,9 +12,11 @@ public class Cursor : MonoBehaviour
     public Camera cam;
     public bool isCol;
     public bool isHover;
+    private RaycastHit lastHit;
     public float hoverTimer = 0.0f;
     public float hoverTime = 2.0f;
     public LayerMask cursorMask;
+    private bool hasEntered = false;
 
     // Start is called before the first frame update
     void Start()
@@ -23,7 +25,7 @@ public class Cursor : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
         Vector3 screenPos = cam.WorldToScreenPoint(handPos.position);
         cursor.gameObject.transform.position = screenPos;
@@ -31,24 +33,52 @@ public class Cursor : MonoBehaviour
         RaycastHit cursorHit;
         cursorRay = cam.ScreenPointToRay(screenPos);
         Debug.DrawRay(cursorRay.origin, cursorRay.direction * 10);
-        if (Physics.Raycast(cursorRay, out cursorHit, 10000, cursorMask))
+        if (Physics.Raycast(cam.transform.position, handPos.position - cam.transform.position, out cursorHit, Mathf.Infinity, cursorMask))
         {
-            hoverTimer += Time.deltaTime;
-            if (hoverTimer >= hoverTime)
+            if (lastHit.transform != cursorHit.transform)
             {
-                /*findMeManager.GetComponent<FindMeObject>().clicked = true;
+                hasEntered = false;
 
-                if (findMeManager.target.GetComponent<FindMeObject>().clicked)
+                // Store the current hit object as the last hit object
+                lastHit = cursorHit;
+
+                hoverTimer += Time.deltaTime;
+
+                Debug.Log("Hit object");
+
+
+                findMeManager.target.GetComponent<FindMeObject>().clicked = true;
+
+                if (findMeManager.target.GetComponent<FindMeObject>().clicked = true)
                 {
-                    Debug.Log("Object Selected");
-                }*/
-                
+                    Debug.Log("Found object");
+                }
+
+
+                //findMeManager.target.GetComponent<FindMeObject>().clicked = false;
+
             }
         }
         else
         {
             hoverTimer -= Time.deltaTime;
+            lastHit = new RaycastHit();
+
         }
         hoverTimer = Mathf.Clamp(hoverTimer, 0, hoverTime);
+    }
+
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (!hasEntered)
+        {
+            // Perform actions when entering the range of the object
+            Debug.Log("Entered range of object: " + other.name);
+
+            // Set the flag to indicate that the trigger has been entered
+            hasEntered = true;
+        }
+
     }
 }
