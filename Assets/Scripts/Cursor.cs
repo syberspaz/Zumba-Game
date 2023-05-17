@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class Cursor : MonoBehaviour
 {
-    public Transform handPos;
+    public GameObject handPos;
     private FindMeManager findMeManager;
     public Image cursor;
     public Camera cam;
@@ -21,19 +21,20 @@ public class Cursor : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        handPos = GameObject.Find("rightHand");
         findMeManager = FindObjectOfType<FindMeManager>();
     }
 
     // Update is called once per frame
     private void Update()
     {
-        Vector3 screenPos = cam.WorldToScreenPoint(handPos.position);
+        Vector3 screenPos = cam.WorldToScreenPoint(handPos.transform.position);
         cursor.gameObject.transform.position = screenPos;
         Ray cursorRay;
         RaycastHit cursorHit;
         cursorRay = cam.ScreenPointToRay(screenPos);
         Debug.DrawRay(cursorRay.origin, cursorRay.direction * 10);
-        if (Physics.Raycast(cam.transform.position, handPos.position - cam.transform.position, out cursorHit, Mathf.Infinity, cursorMask))
+        if (Physics.Raycast(cam.transform.position, handPos.transform.position - cam.transform.position, out cursorHit, Mathf.Infinity, cursorMask))
         {
             if (lastHit.transform != cursorHit.transform)
             {
