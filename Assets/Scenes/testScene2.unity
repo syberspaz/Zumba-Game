@@ -1198,7 +1198,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveWithObject: {fileID: 0}
   rectTransform: {fileID: 0}
-  theCanvas: {fileID: 315951633}
+  theCanvas: {fileID: 0}
   SelectedColor: {r: 0.9622642, g: 0.70588356, b: 0.049928807, a: 0.45490196}
   DeselectedColor: {r: 0.94509804, g: 0.10916059, b: 0, a: 0.45490196}
   Hand: {fileID: 0}

@@ -37,7 +37,7 @@ public class KinectHand2D : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        theCanvas = GetComponentInParent<Canvas>();
         // let's find the kinect joints by name
         Hand = GameObject.Find("rightHand");
         FingerTip = GameObject.Find("rightFingerTip");
