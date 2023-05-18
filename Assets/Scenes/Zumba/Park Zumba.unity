@@ -6113,8 +6113,8 @@ MonoBehaviour:
   - {fileID: 775052043}
   - {fileID: 256265068}
   - {fileID: 634233151}
-  nextScene: 
-  findMeScene: 0
+  nextScene: 070000000400000006000000
+  findMeScene: 3
   currentSong: {fileID: 0}
   timer: 5
   text: {fileID: 956437584}
