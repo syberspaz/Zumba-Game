@@ -10,9 +10,8 @@ Material:
   m_Name: ModelURP
   m_Shader: {fileID: 4800000, guid: 5c4ae923a0c0c4fba98c73c84ae4ff9c, type: 3}
   m_ValidKeywords:
-  - CAM_COUNT_7
+  - CAM_COUNT_8
   - PCF_SIZE_3
-  - TEXTURE_BLEED_REDUCTION
   m_InvalidKeywords: []
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 1
@@ -105,9 +104,8 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _Ambient: 5
+    - _Ambient: 1.5
     - _BumpScale: 1
-    - _ColorBiasMultiplier: 0.13
     - _Confidence: 0.194
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
@@ -131,7 +129,6 @@ Material:
     m_Colors:
     - _AmbColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _ColorBias: {r: 1, g: 1, b: 1, a: 1}
     - _DifColor: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _MaskColor: {r: 1, g: 1, b: 1, a: 1}

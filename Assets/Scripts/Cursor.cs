@@ -50,7 +50,7 @@ public class Cursor : MonoBehaviour
 
                 findMeManager.target.GetComponent<FindMeObject>().clicked = true;
 
-                if (findMeManager.target.GetComponent<FindMeObject>().clicked = true)
+                if (findMeManager.target.GetComponent<FindMeObject>().clicked == true)
                 {
                     Debug.Log("Found object");
                 }

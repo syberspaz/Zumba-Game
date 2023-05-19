@@ -80,8 +80,6 @@ float4 _LightColor0;
 float4 _LightColor;
 float4 _LightPos;
 float4 _TemperatureColor;
-float4 _ColorBias;
-float _ColorBiasMultiplier;
 
 static const float samples = PCF_SIZE;
 static const float bounds  = ( samples / 2.0f ) - 0.5f;
@@ -369,9 +367,9 @@ float4 frag( v2f inputVertex, uniform float4x4 cameraViewProjection[ MAXIMUM_COL
 #else
         float4 light = inputVertex.light;
 #endif
-        finalResult = float4( ( sumColors.xyz / sumColors.w ) * light.rgb + _ColorBias *_ColorBiasMultiplier, 1.0f );
+        finalResult = float4( ( sumColors.xyz / sumColors.w ) * light.rgb, 1.0f );
 #else
-        finalResult = float4( ( sumColors.xyz / sumColors.w ) + _ColorBias *_ColorBiasMultiplier, 1.0f );
+        finalResult = float4( ( sumColors.xyz / sumColors.w ), 1.0f );
 #endif
     }
     #if UNITY_COLORSPACE_GAMMA

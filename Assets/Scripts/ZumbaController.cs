@@ -1,12 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using SoarSDK;
 using TMPro;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class ZumbaController : MonoBehaviour {
+
+  public GameObject VolumetricObject;
 
   public List<GameObject> songStanding;
   public List<GameObject> songSitting;
@@ -24,13 +25,16 @@ public class ZumbaController : MonoBehaviour {
   public TextMeshProUGUI score;
   public TextMeshProUGUI results;
 
+  void Awake()
+    {
+       
+    }
   // Start is called before the first frame update
   void Start() {
     songTimer = 3;
     isFinished = false;
-
-
-  }
+    VolumetricObject = GameObject.Find("VolumetricSDK");
+    }
 
   // Update is called once per frame
   void Update() {
@@ -59,7 +63,8 @@ public class ZumbaController : MonoBehaviour {
     }
   }
   void StartSong() {
-    if (Menu.isStanding) {//if standing based
+        VolumetricObject.SetActive(true);
+        if (Menu.isStanding) {//if standing based
       songStanding[Menu.song].SetActive(true);//enable song
       currentSong = songStanding[Menu.song];
     } else {//sitting

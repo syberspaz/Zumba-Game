@@ -10,10 +10,8 @@ Shader "Soar/SoarShaderURP"
         _FadeDistance("Fade", Range(0.0005,0.45)) = 0.025
 
         [Header(Ambient)]
-        _Ambient("Intensity", Range(0., 5.)) = 1.5
+        _Ambient("Intensity", Range(0., 2.)) = 1.5
         _AmbColor("Color", color) = (1., 1., 1., 1.)
-		_ColorBias("ColorBias",color)=(1.,1.,1.,1.)
-        _ColorBiasMultiplier("ColorBiasMultiplier", Range(0., 1.)) = 0.13
 
         [Header(Diffuse)]
         _Diffuse("Val", Range(0., 1.)) = 1.

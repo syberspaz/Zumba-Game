@@ -30,6 +30,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6279199038666795458}
   - {fileID: 334249727632062883}
@@ -130,6 +131,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 911070104534723498}
   m_RootOrder: 1
@@ -174,7 +176,6 @@ GameObject:
   - component: {fileID: 3335294005484355475}
   - component: {fileID: 7251624036734566283}
   - component: {fileID: 2763433283862402878}
-  - component: {fileID: 5536696153456611270}
   - component: {fileID: 813309898}
   m_Layer: 0
   m_Name: ModelMesh
@@ -193,6 +194,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: -1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 911070104534723498}
   m_RootOrder: 0
@@ -216,6 +218,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -275,21 +278,6 @@ MonoBehaviour:
   bias: 0.1
   EnableReLighting: 0
   PerPixelLighting: 0
---- !u!114 &5536696153456611270
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4964373587931536725}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1867183640, guid: e425bef80473376418b8339edfbb23c7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  createPreview: 0
-  attatchToDirector: 0
-  playableDirector: {fileID: 0}
 --- !u!65 &813309898
 BoxCollider:
   m_ObjectHideFlags: 0
