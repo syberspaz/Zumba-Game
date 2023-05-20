@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UIElements;
 
 public class SkipScene : MonoBehaviour
 {
@@ -11,6 +12,6 @@ public class SkipScene : MonoBehaviour
     {
         Score.wordScrambleTime = -1;
 
-        SceneManager.LoadScene(sceneName);
+        SceneManager.LoadScene(Menu.Zumba);
     }
 }

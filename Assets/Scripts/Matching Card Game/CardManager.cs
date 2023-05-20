@@ -46,7 +46,7 @@ public class CardManager : MonoBehaviour
           Score.matchingCardErrorCount = errorCounter;
           Score.matchingCardTimer = timer;
           //SEND TO NEXT SCENE
-          SceneManager.LoadScene(Menu.background);
+          SceneManager.LoadScene(Menu.Zumba);
         }
       }
     }

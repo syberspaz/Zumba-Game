@@ -10,11 +10,13 @@ Material:
   m_Name: ModelURP
   m_Shader: {fileID: 4800000, guid: 5c4ae923a0c0c4fba98c73c84ae4ff9c, type: 3}
   m_ValidKeywords:
+  - CAM_COUNT_7
   - CAM_COUNT_8
   - PCF_SIZE_3
+  - TEXTURE_BLEED_REDUCTION
   m_InvalidKeywords: []
   m_LightmapFlags: 4
-  m_EnableInstancingVariants: 1
+  m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
   stringTagMap: {}
@@ -104,7 +106,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _Ambient: 1.5
+    - _Ambient: 2
     - _BumpScale: 1
     - _Confidence: 0.194
     - _Cutoff: 0.5

@@ -20,7 +20,7 @@ public class WordScramble : MonoBehaviour {
     temp = new string(current);
     if (answer.Equals(temp)) {
       Score.wordScrambleTime = timer;
-      SceneManager.LoadScene(Menu.background);
+      SceneManager.LoadScene(Menu.Zumba);
     }
   }
 }

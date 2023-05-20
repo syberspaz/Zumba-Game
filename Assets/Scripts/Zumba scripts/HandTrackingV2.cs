@@ -26,7 +26,7 @@ public class HandTrackingV2 : MonoBehaviour {
 
   }
   private void Update() {
-    if (started && SceneManager.GetActiveScene() == SceneManager.GetSceneAt(Menu.background)) {
+    if (started && SceneManager.GetActiveScene() == SceneManager.GetSceneAt(Menu.Zumba)) {
       timer += Time.deltaTime;
       if (inOrderAction.Count > index) {
         if (timer > inOrderAction[index].w - 1) {

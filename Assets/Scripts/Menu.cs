@@ -8,7 +8,7 @@ using UnityEngine.SceneManagement;
 
 public class Menu : MonoBehaviour {
   public static bool isRightHanded;
-  public static int background = 2;
+  public static int Zumba = 1;
   public static int avatar;
   public static bool isStanding = true;
   public static int points = 0;
@@ -18,7 +18,7 @@ public class Menu : MonoBehaviour {
 
   }
   void Start() {
-    SceneManager.LoadScene(background);
+    
   }
 
   // Update is called once per frame

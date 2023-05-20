@@ -40,7 +40,7 @@ public class FindMeManager : MonoBehaviour
       }
       Score.findMeTimeAverage = temp/timeList.Count;
       Score.findMeErrorCount = errorCount;
-      SceneManager.LoadScene(Menu.background);
+      SceneManager.LoadScene(Menu.Zumba);
     }
     for (int i = 0; i < findMeObjects.Count; i++) {
       if (findMeObjects[i].GetComponent<FindMeObject>().clicked) {

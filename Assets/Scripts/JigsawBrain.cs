@@ -41,56 +41,56 @@ public class JigsawBrain : MonoBehaviour
             beachScript.isCompleted = false;
             selected = Random.Range(1, 9);
             Menu.points += (int)score;
-            SceneManager.LoadScene(Menu.background);
+            SceneManager.LoadScene(Menu.Zumba);
         }
         if (goatScript.isCompleted)
         {
             goatScript.isCompleted = false;
             selected = Random.Range(1, 9);
             Menu.points += (int)score;
-            SceneManager.LoadScene(Menu.background);
+            SceneManager.LoadScene(Menu.Zumba);
         }
         if (torontoScript.isCompleted)
         {
             torontoScript.isCompleted = false;
             selected = Random.Range(1, 9);
             Menu.points += (int)score;
-            SceneManager.LoadScene(Menu.background);
+            SceneManager.LoadScene(Menu.Zumba);
         }
         if (flowersScript.isCompleted)
         {
             flowersScript.isCompleted = false;
             selected = Random.Range(1, 9);
             Menu.points += (int)score;
-            SceneManager.LoadScene(Menu.background);
+            SceneManager.LoadScene(Menu.Zumba);
         }
         if (shipScript.isCompleted)
         {
             shipScript.isCompleted = false;
             selected = Random.Range(1, 9);
             Menu.points += (int)score;
-            SceneManager.LoadScene(Menu.background);
+            SceneManager.LoadScene(Menu.Zumba);
         }
         if (dogScript.isCompleted)
         {
             dogScript.isCompleted = false;
             selected = Random.Range(1, 9);
             Menu.points += (int)score;
-            SceneManager.LoadScene(Menu.background);
+            SceneManager.LoadScene(Menu.Zumba);
         }
         if (peggyScript.isCompleted)
         {
             peggyScript.isCompleted = false;
             selected = Random.Range(1, 9);
             Menu.points += (int)score;
-            SceneManager.LoadScene(Menu.background);
+            SceneManager.LoadScene(Menu.Zumba);
         }
         if (boardwalkScript.isCompleted)
         {
             boardwalkScript.isCompleted = false;
             selected = Random.Range(1, 9);
             Menu.points += (int)score;
-            SceneManager.LoadScene(Menu.background);
+            SceneManager.LoadScene(Menu.Zumba);
         }
         switch (selected)
         {
