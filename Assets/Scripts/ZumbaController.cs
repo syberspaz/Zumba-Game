@@ -48,10 +48,10 @@ public class ZumbaController : MonoBehaviour {
         if (songTimer <= 0) {//when delay is finished
           Menu.song++;//boot next song for next load
           if (Menu.song - 1 == findMeScene) {
-            int rand = Random.Range(6,9);
+            int rand = Random.Range(6,10);
             SceneManager.LoadScene(rand);
           }
-          SceneManager.LoadScene(nextScene[Menu.song]);//send to next scene
+          SceneManager.LoadScene(nextScene[Menu.song]);//send to next scen
         }
       }
       

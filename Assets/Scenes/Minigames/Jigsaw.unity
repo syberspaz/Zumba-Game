@@ -32938,6 +32938,14 @@ PrefabInstance:
       propertyPath: rotation
       value: 180
       objectReference: {fileID: 0}
+    - target: {fileID: 619816715998902981, guid: 6c5a4c81e1f741a4392d91dac10f1d9f, type: 3}
+      propertyPath: kinectRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 619816715998902981, guid: 6c5a4c81e1f741a4392d91dac10f1d9f, type: 3}
+      propertyPath: kinectRotation.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 619816715998902982, guid: 6c5a4c81e1f741a4392d91dac10f1d9f, type: 3}
       propertyPath: m_RootOrder
       value: 15

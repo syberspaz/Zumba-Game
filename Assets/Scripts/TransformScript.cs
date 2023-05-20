@@ -8,7 +8,7 @@ public class TransformScript : MonoBehaviour
     public float xInput;
     public float yInput;
     public float zInput;
-    public float rotation;
+    public Quaternion kinectRotation;
 
     // Start is called before the first frame update
     void Start()
@@ -18,7 +18,7 @@ public class TransformScript : MonoBehaviour
 
         KinectTracker.transform.position = new Vector3(xInput, yInput, zInput);
 
-        KinectTracker.transform.Rotate(Vector3.up * rotation); 
+        KinectTracker.transform.rotation = kinectRotation;
 
     }
 
