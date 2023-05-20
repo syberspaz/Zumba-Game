@@ -43,15 +43,18 @@ public class ZumbaController : MonoBehaviour {
       if (!songStarted) {
         StartSong();
       }
-      if (!currentSong.GetComponent<AudioSource>().isPlaying) {//if song audio is finished
+      if (!currentSong.GetComponent<AudioSource>().isPlaying || Input.GetKeyDown(KeyCode.S)) {//if song audio is finished
         songTimer -= Time.deltaTime;//start a 3 second countdown delay
-        if (songTimer <= 0) {//when delay is finished
+        if (songTimer <= 0 || Input.GetKeyDown(KeyCode.S)) {//when delay is finished
           Menu.song++;//boot next song for next load
-          if (Menu.song - 1 == findMeScene) {
+          //if (Menu.song == findMeScene) {
             int rand = Random.Range(6,10);
-            SceneManager.LoadScene(rand);
-          }
-          SceneManager.LoadScene(nextScene[Menu.song]);//send to next scen
+            Debug.Log("memememememememeemememememememe:" + rand);
+            nextScene[4] = rand;
+            //SceneManager.LoadScene(rand);
+          //}
+          SceneManager.LoadScene(nextScene[Menu.song]);//send to next scene
+
         }
       }
       
