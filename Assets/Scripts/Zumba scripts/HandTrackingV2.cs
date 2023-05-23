@@ -21,11 +21,18 @@ public class HandTrackingV2 : MonoBehaviour {
 
   public AverageRecentRating ARR;
 
-  private void Start() {
-    inOrderAction = new List<Vector4>(GetComponent<PointChanger>().pointList[moveTracker].actionList);
+  private void Start()
+    {
+        inOrderAction = new List<Vector4>(GetComponent<PointChanger>().pointList[moveTracker].actionList);
 
-  }
-  private void Update() {
+
+        if (started && SceneManager.GetActiveScene() == SceneManager.GetSceneAt(Menu.Zumba))
+        {
+
+        }
+
+    }
+    private void Update() {
     if (started && SceneManager.GetActiveScene() == SceneManager.GetSceneAt(Menu.Zumba)) {
       timer += Time.deltaTime;
       if (inOrderAction.Count > index) {
