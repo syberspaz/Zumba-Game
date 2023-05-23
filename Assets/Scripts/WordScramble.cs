@@ -10,17 +10,16 @@ public class WordScramble : MonoBehaviour {
   public string answer;
   public string temp;
   public WSController controller;
-  float timer;
-
+  public float timer;
+  public bool finished;
 
   // Update is called once per frame
   void Update() {
-    timer += Time.deltaTime;
-
     temp = new string(current);
     if (answer.Equals(temp)) {
-      Score.wordScrambleTime = timer;
-      SceneManager.LoadScene(Menu.Zumba);
+      finished = true;
+    } else {
+      timer += Time.deltaTime;
     }
   }
 }
