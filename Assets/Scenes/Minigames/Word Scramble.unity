@@ -4038,6 +4038,8 @@ MonoBehaviour:
   answer: 
   temp: 
   controller: {fileID: 133303369}
+  timer: 0
+  finished: 0
 --- !u!114 &651079524
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4158,6 +4160,8 @@ MonoBehaviour:
   answer: 
   temp: 
   controller: {fileID: 133303369}
+  timer: 0
+  finished: 0
 --- !u!114 &660212527
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9485,6 +9489,8 @@ MonoBehaviour:
   answer: 
   temp: 
   controller: {fileID: 133303369}
+  timer: 0
+  finished: 0
 --- !u!114 &1523825963
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10593,6 +10599,8 @@ MonoBehaviour:
   answer: 
   temp: 
   controller: {fileID: 133303369}
+  timer: 0
+  finished: 0
 --- !u!1 &1752469434
 GameObject:
   m_ObjectHideFlags: 0
