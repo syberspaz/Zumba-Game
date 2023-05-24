@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class CardManager : MonoBehaviour
 {
+  public List<Sprite> animalListMaster;
   public List<Sprite> animalList;
   public List<GameObject> cards;
 
@@ -16,6 +17,11 @@ public class CardManager : MonoBehaviour
   float timer;
   int pairs = 0;
   private void Start() {
+    animalList = new List<Sprite>(animalListMaster);
+    while (animalList.Count >= cards.Count / 2) {
+      int rand = Random.Range(0, animalList.Count);
+      animalList.RemoveAt(rand);
+    }
     if (animalList.Count * 2 == cards.Count) {
       foreach (Sprite sprite in animalList) {
         GameObject temp = cards[Random.Range(0, cards.Count)];
