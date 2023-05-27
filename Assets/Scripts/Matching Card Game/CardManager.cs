@@ -16,27 +16,40 @@ public class CardManager : MonoBehaviour
   int errorCounter = 0;
   float timer;
   int pairs = 0;
-  private void Start() {
+  private void Start()
+    {
     animalList = new List<Sprite>(animalListMaster);
-    while (animalList.Count >= cards.Count / 2) {
-      int rand = Random.Range(0, animalList.Count);
-      animalList.RemoveAt(rand);
-    }
-    if (animalList.Count * 2 == cards.Count) {
-      foreach (Sprite sprite in animalList) {
-        GameObject temp = cards[Random.Range(0, cards.Count)];
-        temp.GetComponent<Image>().sprite = sprite;
-        cards.Remove(temp);
+        int desiredAnimalCount = Mathf.FloorToInt(cards.Count / 2f);
+        List<int> cardIndices = new List<int>();
 
-        //do it twice to match
-        temp = cards[Random.Range(0, cards.Count)];
-        temp.GetComponent<Image>().sprite = sprite;
-        cards.Remove(temp);
-      }
-    } else {
-      Debug.LogError("CARD TO ANIMAL RATIO MISMATCH");
+        for (int i = 0; i < cards.Count; i++)
+        {
+            cardIndices.Add(i);
+        }
+
+        while (animalList.Count > desiredAnimalCount)
+        {
+            int randIndex = Random.Range(0, cardIndices.Count);
+            int cardIndex = cardIndices[randIndex];
+            cardIndices.RemoveAt(randIndex);
+
+            Sprite sprite = animalList[Random.Range(0, animalList.Count)];
+            cards[cardIndex].GetComponent<Image>().sprite = sprite;
+            animalList.Remove(sprite);
+        }
+
+        if (animalList.Count * 2 == cards.Count)
+        {
+            foreach (Sprite sprite in animalList)
+            {
+                int randIndex = Random.Range(0, cardIndices.Count);
+                int cardIndex = cardIndices[randIndex];
+                cardIndices.RemoveAt(randIndex);
+
+                cards[cardIndex].GetComponent<Image>().sprite = sprite;
+            }
+        }
     }
-  }
   private void Update() {
     timer += Time.deltaTime;
     if (card1 != null && card2 != null) {
