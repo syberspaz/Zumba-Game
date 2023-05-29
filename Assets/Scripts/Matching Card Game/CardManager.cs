@@ -4,8 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class CardManager : MonoBehaviour
-{
+public class CardManager : MonoBehaviour {
   public List<Sprite> animalListMaster;
   public List<Sprite> animalList;
   public List<GameObject> cards;
@@ -16,40 +15,31 @@ public class CardManager : MonoBehaviour
   int errorCounter = 0;
   float timer;
   int pairs = 0;
-  private void Start()
-    {
-    animalList = new List<Sprite>(animalListMaster);
-        int desiredAnimalCount = Mathf.FloorToInt(cards.Count / 2f);
-        List<int> cardIndices = new List<int>();
+  private void Start() {
+    animalList = new List<Sprite>(animalListMaster); //dupe list
+    
+    int desiredAnimalCount = Mathf.FloorToInt(cards.Count / 2f); // desired animal count
 
-        for (int i = 0; i < cards.Count; i++)
-        {
-            cardIndices.Add(i);
-        }
-
-        while (animalList.Count > desiredAnimalCount)
-        {
-            int randIndex = Random.Range(0, cardIndices.Count);
-            int cardIndex = cardIndices[randIndex];
-            cardIndices.RemoveAt(randIndex);
-
-            Sprite sprite = animalList[Random.Range(0, animalList.Count)];
-            cards[cardIndex].GetComponent<Image>().sprite = sprite;
-            animalList.Remove(sprite);
-        }
-
-        if (animalList.Count * 2 == cards.Count)
-        {
-            foreach (Sprite sprite in animalList)
-            {
-                int randIndex = Random.Range(0, cardIndices.Count);
-                int cardIndex = cardIndices[randIndex];
-                cardIndices.RemoveAt(randIndex);
-
-                cards[cardIndex].GetComponent<Image>().sprite = sprite;
-            }
-        }
+    while (animalList.Count > desiredAnimalCount) {//while list is mora than desired
+      Sprite sprite = animalList[Random.Range(0, animalList.Count)];//take random sprite
+      animalList.Remove(sprite);
     }
+
+    if (animalList.Count * 2 == cards.Count) {
+      foreach (Sprite sprite in animalList) {
+        GameObject temp = cards[Random.Range(0, cards.Count)];
+        temp.GetComponent<Image>().sprite = sprite;
+        cards.Remove(temp);
+
+        //do it twice to match
+        temp = cards[Random.Range(0, cards.Count)];
+        temp.GetComponent<Image>().sprite = sprite;
+        cards.Remove(temp);
+      }
+    } else {
+      Debug.LogError("MISMATCH IN SPRITES TO CARDS");
+    }
+  }
   private void Update() {
     timer += Time.deltaTime;
     if (card1 != null && card2 != null) {
