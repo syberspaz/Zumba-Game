@@ -2715,6 +2715,10 @@ PrefabInstance:
       value: VOD\Song 2\Standing\Song 2 - Standing_98655009_master.m3u8
       objectReference: {fileID: 0}
     - target: {fileID: 2763433283862402878, guid: ab698e7e20e914aa69d83ae72b00a3f8, type: 3}
+      propertyPath: HideOnComplete
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2763433283862402878, guid: ab698e7e20e914aa69d83ae72b00a3f8, type: 3}
       propertyPath: EnableReLighting
       value: 0
       objectReference: {fileID: 0}
@@ -4357,6 +4361,10 @@ PrefabInstance:
       value: VOD\Song 5\Standing\Song 5 - Standing_98657016_master.m3u8
       objectReference: {fileID: 0}
     - target: {fileID: 2763433283862402878, guid: ab698e7e20e914aa69d83ae72b00a3f8, type: 3}
+      propertyPath: HideOnComplete
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2763433283862402878, guid: ab698e7e20e914aa69d83ae72b00a3f8, type: 3}
       propertyPath: EnableReLighting
       value: 0
       objectReference: {fileID: 0}
@@ -4711,6 +4719,10 @@ PrefabInstance:
     - target: {fileID: 5784611792892324939, guid: f0f6a9e12f05a684c9609755d177c9ca, type: 3}
       propertyPath: m_Name
       value: EnableMeshes
+      objectReference: {fileID: 0}
+    - target: {fileID: 5784611792892324939, guid: f0f6a9e12f05a684c9609755d177c9ca, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5784611792892324941, guid: f0f6a9e12f05a684c9609755d177c9ca, type: 3}
       propertyPath: m_RootOrder
@@ -7833,6 +7845,10 @@ PrefabInstance:
     - target: {fileID: 2763433283862402878, guid: ab698e7e20e914aa69d83ae72b00a3f8, type: 3}
       propertyPath: fileName
       value: VOD\Song 3\Standing\Song 3 - Standing_98655610_master.m3u8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2763433283862402878, guid: ab698e7e20e914aa69d83ae72b00a3f8, type: 3}
+      propertyPath: HideOnComplete
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2763433283862402878, guid: ab698e7e20e914aa69d83ae72b00a3f8, type: 3}
       propertyPath: EnableReLighting

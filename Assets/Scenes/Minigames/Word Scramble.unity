@@ -340,7 +340,7 @@ MonoBehaviour:
   placed: 0
   slotNum: 0
   colliding: 0
-  ws: {fileID: 660212526}
+  ws: {fileID: 0}
   letter: {fileID: 484975419}
   isSelected: 0
 --- !u!61 &6291072
@@ -1101,8 +1101,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   four: {fileID: 1523825961}
   five: {fileID: 1732473759}
-  six: {fileID: 651079522}
-  seven: {fileID: 660212525}
   selectedLength: 0
   selectedWord: 0
   fourBank:
@@ -1110,10 +1108,21 @@ MonoBehaviour:
   - RISE
   - GROW
   - FORK
+  - BELL
+  - FISH
+  - BLOW
+  - HOLD
+  - BURN
+  - BOWL
+  - MILK
+  - PLAY
+  - WASH
+  - MENU
+  - SOFT
   fiveBank:
-  - BELLS
-  - TOXIC
   - BERRY
+  - TOXIC
+  - BLADE
   - WATER
   - HEART
   - BEACH
@@ -1124,24 +1133,7 @@ MonoBehaviour:
   - DREAM
   - CLIMB
   - DANCE
-  sixBank:
-  - SPRING
-  - FLOWER
-  - BUBBLE
-  - YELLOW
-  - GARDEN
-  - ACTIVE
-  - CASTLE
-  - DOCTOR
-  - FAMILY
-  - ISLAND
-  - PLACES
-  sevenBank:
-  - BEDROOM
-  - ICEBERG
-  - PACIFIC
-  - HARVEST
-  - RAINING
+  - BACON
   fourLetters:
   - {fileID: 124924276}
   - {fileID: 849308322}
@@ -1153,21 +1145,6 @@ MonoBehaviour:
   - {fileID: 881467018}
   - {fileID: 763319186}
   - {fileID: 1975747100}
-  sixLetters:
-  - {fileID: 1362042418}
-  - {fileID: 1676035172}
-  - {fileID: 1660641199}
-  - {fileID: 447783213}
-  - {fileID: 1184628786}
-  - {fileID: 1884565874}
-  sevenLetters:
-  - {fileID: 1328330761}
-  - {fileID: 179835783}
-  - {fileID: 619159583}
-  - {fileID: 1651362526}
-  - {fileID: 86509}
-  - {fileID: 1251628749}
-  - {fileID: 484975419}
   fourSlots:
   - {fileID: 682947289}
   - {fileID: 26270914}
@@ -1179,21 +1156,6 @@ MonoBehaviour:
   - {fileID: 1434885183}
   - {fileID: 862793305}
   - {fileID: 857531661}
-  sixSlots:
-  - {fileID: 1095545953}
-  - {fileID: 403691253}
-  - {fileID: 1318489125}
-  - {fileID: 485436200}
-  - {fileID: 2046166126}
-  - {fileID: 1211157134}
-  sevenSlots:
-  - {fileID: 335984037}
-  - {fileID: 601353917}
-  - {fileID: 1050469030}
-  - {fileID: 169477577}
-  - {fileID: 909655624}
-  - {fileID: 384255778}
-  - {fileID: 6291068}
   fourSlotsPos:
   - {fileID: 682947290}
   - {fileID: 26270915}
@@ -1205,21 +1167,6 @@ MonoBehaviour:
   - {fileID: 1434885184}
   - {fileID: 862793306}
   - {fileID: 857531662}
-  sixSlotsPos:
-  - {fileID: 1095545954}
-  - {fileID: 403691254}
-  - {fileID: 1318489126}
-  - {fileID: 485436201}
-  - {fileID: 2046166127}
-  - {fileID: 1211157135}
-  sevenSlotsPos:
-  - {fileID: 335984038}
-  - {fileID: 601353918}
-  - {fileID: 1050469031}
-  - {fileID: 169477578}
-  - {fileID: 909655625}
-  - {fileID: 384255779}
-  - {fileID: 6291069}
   temp: 
   canvas:
   - {fileID: 1523825965}
@@ -1232,21 +1179,6 @@ MonoBehaviour:
   - {x: 0, y: 0}
   - {x: 0, y: 0}
   fivePos:
-  - {x: 0, y: 0}
-  - {x: 0, y: 0}
-  - {x: 0, y: 0}
-  - {x: 0, y: 0}
-  - {x: 0, y: 0}
-  sixPos:
-  - {x: 0, y: 0}
-  - {x: 0, y: 0}
-  - {x: 0, y: 0}
-  - {x: 0, y: 0}
-  - {x: 0, y: 0}
-  - {x: 0, y: 0}
-  sevenPos:
-  - {x: 0, y: 0}
-  - {x: 0, y: 0}
   - {x: 0, y: 0}
   - {x: 0, y: 0}
   - {x: 0, y: 0}
@@ -1525,7 +1457,7 @@ MonoBehaviour:
   placed: 0
   slotNum: 0
   colliding: 0
-  ws: {fileID: 660212526}
+  ws: {fileID: 0}
   letter: {fileID: 1651362526}
   isSelected: 0
 --- !u!61 &169477581
@@ -1851,7 +1783,7 @@ MonoBehaviour:
   placed: 0
   slotNum: 0
   colliding: 0
-  ws: {fileID: 660212526}
+  ws: {fileID: 0}
   letter: {fileID: 1328330761}
   isSelected: 0
 --- !u!61 &335984041
@@ -2160,7 +2092,7 @@ MonoBehaviour:
   placed: 0
   slotNum: 0
   colliding: 0
-  ws: {fileID: 660212526}
+  ws: {fileID: 0}
   letter: {fileID: 1251628749}
   isSelected: 0
 --- !u!61 &384255782
@@ -2392,7 +2324,7 @@ MonoBehaviour:
   placed: 0
   slotNum: 0
   colliding: 0
-  ws: {fileID: 651079523}
+  ws: {fileID: 0}
   letter: {fileID: 1676035172}
   isSelected: 0
 --- !u!61 &403691257
@@ -3329,7 +3261,7 @@ MonoBehaviour:
   placed: 0
   slotNum: 0
   colliding: 0
-  ws: {fileID: 651079523}
+  ws: {fileID: 0}
   letter: {fileID: 447783213}
   isSelected: 0
 --- !u!61 &485436204
@@ -3655,7 +3587,7 @@ MonoBehaviour:
   placed: 0
   slotNum: 0
   colliding: 0
-  ws: {fileID: 660212526}
+  ws: {fileID: 0}
   letter: {fileID: 179835783}
   isSelected: 0
 --- !u!61 &601353921
@@ -4014,7 +3946,6 @@ GameObject:
   - component: {fileID: 651079526}
   - component: {fileID: 651079525}
   - component: {fileID: 651079524}
-  - component: {fileID: 651079523}
   m_Layer: 5
   m_Name: 6 Letters
   m_TagString: Untagged
@@ -4022,24 +3953,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
---- !u!114 &651079523
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 651079522}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f2ed16420b282954db827064f21b3bf4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  current: 000000000000000000000000
-  answer: 
-  temp: 
-  controller: {fileID: 133303369}
-  timer: 0
-  finished: 0
 --- !u!114 &651079524
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4136,32 +4049,13 @@ GameObject:
   - component: {fileID: 660212529}
   - component: {fileID: 660212528}
   - component: {fileID: 660212527}
-  - component: {fileID: 660212526}
   m_Layer: 5
   m_Name: 7 Letters
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &660212526
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 660212525}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f2ed16420b282954db827064f21b3bf4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  current: 0000000000000000000000000000
-  answer: 
-  temp: 
-  controller: {fileID: 133303369}
-  timer: 0
-  finished: 0
+  m_IsActive: 0
 --- !u!114 &660212527
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5010,7 +4904,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 210279052, guid: 019b917704c3c29478d778e143d411d2, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 210279053, guid: 019b917704c3c29478d778e143d411d2, type: 3}
       propertyPath: m_RootOrder
@@ -6514,7 +6408,7 @@ MonoBehaviour:
   placed: 0
   slotNum: 0
   colliding: 0
-  ws: {fileID: 660212526}
+  ws: {fileID: 0}
   letter: {fileID: 86509}
   isSelected: 0
 --- !u!61 &909655628
@@ -6808,7 +6702,7 @@ MonoBehaviour:
   placed: 0
   slotNum: 0
   colliding: 0
-  ws: {fileID: 660212526}
+  ws: {fileID: 0}
   letter: {fileID: 619159583}
   isSelected: 0
 --- !u!61 &1050469034
@@ -6999,7 +6893,7 @@ MonoBehaviour:
   placed: 0
   slotNum: 0
   colliding: 0
-  ws: {fileID: 651079523}
+  ws: {fileID: 0}
   letter: {fileID: 1362042418}
   isSelected: 0
 --- !u!61 &1095545957
@@ -7927,7 +7821,7 @@ MonoBehaviour:
   placed: 0
   slotNum: 0
   colliding: 0
-  ws: {fileID: 651079523}
+  ws: {fileID: 0}
   letter: {fileID: 1884565874}
   isSelected: 0
 --- !u!61 &1211157138
@@ -8562,7 +8456,7 @@ MonoBehaviour:
   placed: 0
   slotNum: 0
   colliding: 0
-  ws: {fileID: 651079523}
+  ws: {fileID: 0}
   letter: {fileID: 1660641199}
   isSelected: 0
 --- !u!61 &1318489129
@@ -11721,7 +11615,7 @@ MonoBehaviour:
   placed: 0
   slotNum: 0
   colliding: 0
-  ws: {fileID: 651079523}
+  ws: {fileID: 0}
   letter: {fileID: 1184628786}
   isSelected: 0
 --- !u!61 &2046166130
@@ -12092,7 +11986,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &2106960823
 MonoBehaviour:
   m_ObjectHideFlags: 0

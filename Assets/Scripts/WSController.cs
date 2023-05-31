@@ -9,34 +9,34 @@ using UnityEngine.SceneManagement;
 public class WSController : MonoBehaviour {
   public GameObject four;
   public GameObject five;
-  public GameObject six;
-  public GameObject seven;
+  //public GameObject six;
+  //public GameObject seven;
   public int selectedLength;
   public int selectedWord;
   public string[] fourBank;
   public string[] fiveBank;
-  public string[] sixBank;
-  public string[] sevenBank;
+  //public string[] sixBank;
+  //public string[] sevenBank;
   WordScramble script;
   public TextMeshProUGUI[] fourLetters;
   public TextMeshProUGUI[] fiveLetters;
-  public TextMeshProUGUI[] sixLetters;
-  public TextMeshProUGUI[] sevenLetters;
+  //public TextMeshProUGUI[] sixLetters;
+  //public TextMeshProUGUI[] sevenLetters;
   public GameObject[] fourSlots;
   public GameObject[] fiveSlots;
-  public GameObject[] sixSlots;
-  public GameObject[] sevenSlots;
+  //public GameObject[] sixSlots;
+  //public GameObject[] sevenSlots;
   public RectTransform[] fourSlotsPos = new RectTransform[4];
   public RectTransform[] fiveSlotsPos = new RectTransform[5];
-  public RectTransform[] sixSlotsPos = new RectTransform[6];
-  public RectTransform[] sevenSlotsPos = new RectTransform[7];
+  //public RectTransform[] sixSlotsPos = new RectTransform[6];
+  //public RectTransform[] sevenSlotsPos = new RectTransform[7];
   public string temp;
   public System.Random r = new System.Random();
   public Canvas[] canvas;
   public Vector2[] fourPos;
   public Vector2[] fivePos;
-  public Vector2[] sixPos;
-  public Vector2[] sevenPos;
+  //public Vector2[] sixPos;
+  //public Vector2[] sevenPos;
 
   string lastUsedWord;
   float totalTimer;
@@ -50,12 +50,12 @@ public class WSController : MonoBehaviour {
     for (int i = 0; i < fiveSlotsPos.Length; i++) {
       fivePos[i] = fiveSlots[i].GetComponent<RectTransform>().anchoredPosition;
     }
-    for (int i = 0; i < sixSlotsPos.Length; i++) {
+    /*for (int i = 0; i < sixSlotsPos.Length; i++) {
       sixPos[i] = sixSlots[i].GetComponent<RectTransform>().anchoredPosition;
     }
     for (int i = 0; i < sevenSlotsPos.Length; i++) {
       sevenPos[i] = sevenSlots[i].GetComponent<RectTransform>().anchoredPosition;
-    }
+    }*/
     GenerateWord();
   }
 
@@ -79,13 +79,13 @@ public class WSController : MonoBehaviour {
   }
 
   public void GenerateWord() {
-    selectedLength = Random.Range(4, 8);
+    selectedLength = Random.Range(4, 6);
     switch (selectedLength) {
       case 4:
         four.gameObject.SetActive(true);
         five.gameObject.SetActive(false);
-        six.gameObject.SetActive(false);
-        seven.gameObject.SetActive(false);
+        //six.gameObject.SetActive(false);
+        //seven.gameObject.SetActive(false);
         do {
           selectedWord = Random.Range(0, fourBank.Length - 1);
           script = four.gameObject.GetComponent<WordScramble>();
@@ -97,16 +97,16 @@ public class WSController : MonoBehaviour {
         temp = new string(temp.ToCharArray().OrderBy(s => r.Next()).ToArray());
         for (int i = 0; i < selectedLength; i++) {
           fourLetters[i].text = temp[i].ToString();
-          //fourSlots[i].transform.localPosition = fourSlotsPos[i].localPosition;
-          //fourSlots[i].transform.position = canvas[0].transform.TransformPoint(fourPos[i]);
+          fourSlots[i].transform.localPosition = fourSlotsPos[i].localPosition;
+          fourSlots[i].transform.position = canvas[0].transform.TransformPoint(fourPos[i]);
           fourSlots[i].GetComponent<RectTransform>().anchoredPosition = fourPos[i];
         }
         break;
       case 5:
         four.gameObject.SetActive(false);
         five.gameObject.SetActive(true);
-        six.gameObject.SetActive(false);
-        seven.gameObject.SetActive(false);
+        //six.gameObject.SetActive(false);
+        //seven.gameObject.SetActive(false);
         do {
           selectedWord = Random.Range(0, fiveBank.Length - 1);
           script = five.gameObject.GetComponent<WordScramble>();
@@ -123,7 +123,7 @@ public class WSController : MonoBehaviour {
           fiveSlots[i].GetComponent<RectTransform>().anchoredPosition = fivePos[i];
         }
         break;
-      case 6:
+      /*case 6:
         four.gameObject.SetActive(false);
         five.gameObject.SetActive(false);
         six.gameObject.SetActive(true);
@@ -164,7 +164,7 @@ public class WSController : MonoBehaviour {
           //sevenSlots[i].transform.position = canvas[3].transform.TransformPoint(sevenPos[i]);
           sevenSlots[i].GetComponent<RectTransform>().anchoredPosition = sevenPos[i];
         }
-        break;
+        break;*/
     }
   }
 }
