@@ -13,7 +13,7 @@ public class ReenableChildrenRenderers : MonoBehaviour
     {
         kinectMeshesEnable = GameObject.Find("pointBody");
 
-        if (kinectMeshesEnable = null)
+        if (kinectMeshesEnable != null)
         {
             EnableMeshRenderersRecursive(kinectMeshesEnable.transform);
         }

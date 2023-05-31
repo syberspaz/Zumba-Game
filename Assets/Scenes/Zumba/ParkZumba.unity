@@ -344,11 +344,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2763433283862402878, guid: ab698e7e20e914aa69d83ae72b00a3f8, type: 3}
       propertyPath: EnableReLighting
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2763433283862402878, guid: ab698e7e20e914aa69d83ae72b00a3f8, type: 3}
       propertyPath: PerPixelLighting
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3335294005484355475, guid: ab698e7e20e914aa69d83ae72b00a3f8, type: 3}
       propertyPath: m_Mesh
@@ -2720,11 +2720,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2763433283862402878, guid: ab698e7e20e914aa69d83ae72b00a3f8, type: 3}
       propertyPath: EnableReLighting
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2763433283862402878, guid: ab698e7e20e914aa69d83ae72b00a3f8, type: 3}
       propertyPath: PerPixelLighting
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3335294005484355475, guid: ab698e7e20e914aa69d83ae72b00a3f8, type: 3}
       propertyPath: m_Mesh
@@ -4366,11 +4366,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2763433283862402878, guid: ab698e7e20e914aa69d83ae72b00a3f8, type: 3}
       propertyPath: EnableReLighting
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2763433283862402878, guid: ab698e7e20e914aa69d83ae72b00a3f8, type: 3}
       propertyPath: PerPixelLighting
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3335294005484355475, guid: ab698e7e20e914aa69d83ae72b00a3f8, type: 3}
       propertyPath: m_Mesh
@@ -4722,7 +4722,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5784611792892324939, guid: f0f6a9e12f05a684c9609755d177c9ca, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5784611792892324941, guid: f0f6a9e12f05a684c9609755d177c9ca, type: 3}
       propertyPath: m_RootOrder
@@ -6912,7 +6912,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2763433283862402878, guid: ab698e7e20e914aa69d83ae72b00a3f8, type: 3}
   m_PrefabInstance: {fileID: 1071985154}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1479179837}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: -1602337218, guid: e425bef80473376418b8339edfbb23c7, type: 3}
@@ -7490,26 +7490,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: d6812f3f59620f84c91bbeb477f8f32b, type: 3}
   m_PrefabInstance: {fileID: 1472418545}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1479179837 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4964373587931536725, guid: ab698e7e20e914aa69d83ae72b00a3f8, type: 3}
-  m_PrefabInstance: {fileID: 1071985154}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1479179838
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1479179837}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1867183640, guid: b495353b2c0b33844b25ec28bd085a6c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  createPreview: 0
-  attatchToDirector: 0
-  playableDirector: {fileID: 0}
 --- !u!1001 &1517909022
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7900,11 +7880,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2763433283862402878, guid: ab698e7e20e914aa69d83ae72b00a3f8, type: 3}
       propertyPath: EnableReLighting
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2763433283862402878, guid: ab698e7e20e914aa69d83ae72b00a3f8, type: 3}
       propertyPath: PerPixelLighting
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3335294005484355475, guid: ab698e7e20e914aa69d83ae72b00a3f8, type: 3}
       propertyPath: m_Mesh
