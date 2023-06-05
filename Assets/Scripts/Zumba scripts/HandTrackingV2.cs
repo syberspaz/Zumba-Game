@@ -18,22 +18,20 @@ public class HandTrackingV2 : MonoBehaviour {
   public float averageRecentAccuracy;
   public float accuracyTimeInterval = 5;
   public int moveTracker = 0;
-
-  public AverageRecentRating ARR;
+  public float increaseRate = 5.0f; // Amount to increase per second
+  private float elapsedTime = 0.0f;
+  private AverageRecentRating ARR;
 
   private void Start()
     {
         inOrderAction = new List<Vector4>(GetComponent<PointChanger>().pointList[moveTracker].actionList);
-
-
-        if (started && SceneManager.GetActiveScene() == SceneManager.GetSceneAt(Menu.Zumba))
-        {
-
-        }
+        ARR = FindObjectOfType<AverageRecentRating>();
 
     }
     private void Update() {
     if (started && SceneManager.GetActiveScene() == SceneManager.GetSceneAt(Menu.Zumba)) {
+      elapsedTime += Time.deltaTime;
+      averageRecentAccuracy += increaseRate * Time.deltaTime;
       timer += Time.deltaTime;
       if (inOrderAction.Count > index) {
         if (timer > inOrderAction[index].w - 1) {
@@ -67,7 +65,26 @@ public class HandTrackingV2 : MonoBehaviour {
             ARR.jointCount += 1;
             // RECENT ACCURACY OUTPUT IN A DECIMAL FORMAT (IE 0.0 - 1.0 is 0 to  100%)
             //INSERT STAR CODE HERE
-
+            if (averageRecentAccuracy >= 10)
+            {
+               ARR.score = 1;
+            }
+            if (averageRecentAccuracy >= 20 && averageRecentAccuracy <= 30)
+            {
+                ARR.score = 2;
+            }
+            if (averageRecentAccuracy >= 31 && averageRecentAccuracy <= 40)
+            {
+                ARR.score = 3;
+            }
+            if (averageRecentAccuracy >= 41 && averageRecentAccuracy <= 50)
+            {
+                ARR.score = 4;
+            }
+            if (averageRecentAccuracy >= 51)
+            {
+                ARR.score = 5;
+            }
             averageRecentAccuracy = 0;
 
           }

@@ -7,6 +7,7 @@ public class AverageRecentRating : MonoBehaviour
 {
   public float average;
   public int jointCount;
+  public int score = 0;
   public float interval;
   float timer;
   public Image image;
@@ -16,7 +17,7 @@ public class AverageRecentRating : MonoBehaviour
     timer += Time.deltaTime;
     if (timer > interval) {
       float temp = average / jointCount;
-      int score = 0;
+      
       while (temp > 0) {
         score += 1;
         temp -= 0.2f;
