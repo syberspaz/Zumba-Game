@@ -17,7 +17,7 @@ public class Cursor : MonoBehaviour
     public float hoverTime = 2.0f;
     public LayerMask cursorMask;
     private bool hasEntered = false;
-
+    private bool isClicking = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -39,38 +39,47 @@ public class Cursor : MonoBehaviour
             if (lastHit.transform != cursorHit.transform)
             {
                 hasEntered = false;
-
-                // Store the current hit object as the last hit object
                 lastHit = cursorHit;
-
                 hoverTimer += Time.deltaTime;
+                Debug.Log("Hit object: " + cursorHit.transform.name);
 
-                Debug.Log("Hit object");
-
-
-                findMeManager.target.GetComponent<FindMeObject>().clicked = true;
-
-                if (findMeManager.target.GetComponent<FindMeObject>().clicked == true)
+                if (cursorHit.transform == findMeManager.target.transform)
                 {
-                    Debug.Log("Found object");
+                    if (!findMeManager.target.GetComponent<FindMeObject>().clicked)
+                    {
+                        findMeManager.target.GetComponent<FindMeObject>().clicked = true;
+                        Debug.Log("Found object");
+                    }
                 }
+                else
+                {
+                    // Increment error count for other objects
+                    bool foundClickedObject = false;
+                    for (int i = 0; i < findMeManager.findMeObjects.Count; i++)
+                    {
+                        if (findMeManager.findMeObjects[i] != findMeManager.target && findMeManager.findMeObjects[i].GetComponent<FindMeObject>().clicked && hasEntered)
+                        {
+                            foundClickedObject = true;
+                            break;
+                        }
+                    }
 
-
-                //findMeManager.target.GetComponent<FindMeObject>().clicked = false;
-
+                    if (!foundClickedObject)
+                    {
+                        findMeManager.errorCount++;
+                    }
+                }
             }
         }
-        else
-        {
-            hoverTimer -= Time.deltaTime;
-            lastHit = new RaycastHit();
 
-        }
+        hoverTimer -= Time.deltaTime;
+        lastHit = new RaycastHit();
+        
         hoverTimer = Mathf.Clamp(hoverTimer, 0, hoverTime);
     }
 
 
-    private void OnTriggerEnter(Collider other)
+    void OnTriggerEnter(Collider other)
     {
         if (!hasEntered)
         {
@@ -82,4 +91,9 @@ public class Cursor : MonoBehaviour
         }
 
     }
+    private void OnTriggerExit(Collider other)
+    {
+        hasEntered = true;
+    }
 }
+

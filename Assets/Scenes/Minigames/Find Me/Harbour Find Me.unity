@@ -6560,7 +6560,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &630670811
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9106,6 +9106,7 @@ MonoBehaviour:
   - {fileID: 147698267}
   - {fileID: 84864597}
   - {fileID: 578448359}
+  - {fileID: 328543543}
   - {fileID: 328543543}
   findMeObjectsEditable: []
   timeList: []
@@ -15934,7 +15935,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 210279052, guid: 019b917704c3c29478d778e143d411d2, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 210279053, guid: 019b917704c3c29478d778e143d411d2, type: 3}
       propertyPath: m_RootOrder

@@ -33,7 +33,7 @@ public class FindMeManager : MonoBehaviour
       timeList.Add(timer);
       timer = 0;
     } else if (target.GetComponent<FindMeObject>().clicked) {
-      //RETURN ERROR COUNT FOR THIS ONE OBJECT AND THE TIME IT TOOK
+      //RETURN ERROR COUNT FOR THIS ONE OBJECT AND THE TIME IT TOOK  
       float temp = 0;
       for (int i = 0; i < timeList.Count; i++) {
         temp += timeList[i];
