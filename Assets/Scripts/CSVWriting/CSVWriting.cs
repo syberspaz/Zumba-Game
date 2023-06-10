@@ -8,14 +8,15 @@ public class CSVWriting : MonoBehaviour {
   //[System.Serializable]
 
 
-  public string fileName = "/test.csv";
-  private string currentTimeString;
-  public bool instantiate = true;
-  TextWriter tw;
+   public string fileName = "/test.csv";
+   public bool instantiate = true;
+   public string whatTimeIsIt;
+   TextWriter tw;
 
   private void Start() {
     fileName = Application.dataPath + fileName;
-    
+    System.DateTime currentTime = System.DateTime.Now;
+    whatTimeIsIt = currentTime.ToString();
     if (File.Exists(fileName)) instantiate = false;
     else instantiate = true;
   }
@@ -24,10 +25,9 @@ public class CSVWriting : MonoBehaviour {
   }
   public void WriteCSV() {
     if (instantiate) {
-      System.DateTime currentTime = System.DateTime.Now;
-      currentTimeString = currentTime.ToString();
+
       tw = new StreamWriter(fileName, false);
-      tw.WriteLine("ID,Date,Find Me Time Average,Find Me Error Count,Matching Card Time,Matching Card Error Count,Word Scramble Time (-1 is a skip)");
+      tw.WriteLine("ID,Date,Find Me Time Average,Find Me Error Count,Matching Card Time,Matching Card Error Count,Word Scramble Time (-1 is a skip), Current Time");
       tw.Close();
       instantiate = false;
     }
@@ -39,8 +39,9 @@ public class CSVWriting : MonoBehaviour {
           Score.findMeErrorCount + "," +
           Score.matchingCardTimer + "," +
           Score.matchingCardErrorCount + "," +
-          Score.wordScrambleTime + "," + 
-          currentTimeString);
+          Score.wordScrambleTime + "," +  
+          Score.JigsawTime + "," +
+          whatTimeIsIt);
 
 
         tw.Close();

@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class JigsawBrain : MonoBehaviour
 {
     public Canvas beach;
+    public float timer;
     public Canvas goat;
     public Canvas toronto;
     public Canvas flowers;
@@ -33,6 +34,8 @@ public class JigsawBrain : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        timer += Time.deltaTime;
+
         if (score > 50)
             score -= 2 * Time.deltaTime;
 
@@ -42,6 +45,7 @@ public class JigsawBrain : MonoBehaviour
             selected = Random.Range(1, 9);
             Menu.points += (int)score;
             SceneManager.LoadScene(Menu.Zumba);
+            Score.JigsawTime = timer;
         }
         if (goatScript.isCompleted)
         {
@@ -49,6 +53,7 @@ public class JigsawBrain : MonoBehaviour
             selected = Random.Range(1, 9);
             Menu.points += (int)score;
             SceneManager.LoadScene(Menu.Zumba);
+            Score.JigsawTime = timer;
         }
         if (torontoScript.isCompleted)
         {
@@ -56,6 +61,7 @@ public class JigsawBrain : MonoBehaviour
             selected = Random.Range(1, 9);
             Menu.points += (int)score;
             SceneManager.LoadScene(Menu.Zumba);
+            Score.JigsawTime = timer;
         }
         if (flowersScript.isCompleted)
         {
@@ -63,6 +69,7 @@ public class JigsawBrain : MonoBehaviour
             selected = Random.Range(1, 9);
             Menu.points += (int)score;
             SceneManager.LoadScene(Menu.Zumba);
+            Score.JigsawTime = timer;
         }
         if (shipScript.isCompleted)
         {
@@ -70,6 +77,7 @@ public class JigsawBrain : MonoBehaviour
             selected = Random.Range(1, 9);
             Menu.points += (int)score;
             SceneManager.LoadScene(Menu.Zumba);
+            Score.JigsawTime = timer;
         }
         if (dogScript.isCompleted)
         {
@@ -77,6 +85,7 @@ public class JigsawBrain : MonoBehaviour
             selected = Random.Range(1, 9);
             Menu.points += (int)score;
             SceneManager.LoadScene(Menu.Zumba);
+            Score.JigsawTime = timer;
         }
         if (peggyScript.isCompleted)
         {
@@ -84,6 +93,7 @@ public class JigsawBrain : MonoBehaviour
             selected = Random.Range(1, 9);
             Menu.points += (int)score;
             SceneManager.LoadScene(Menu.Zumba);
+            Score.JigsawTime = timer;
         }
         if (boardwalkScript.isCompleted)
         {
@@ -91,6 +101,7 @@ public class JigsawBrain : MonoBehaviour
             selected = Random.Range(1, 9);
             Menu.points += (int)score;
             SceneManager.LoadScene(Menu.Zumba);
+            Score.JigsawTime = timer;
         }
         switch (selected)
         {

@@ -9,5 +9,6 @@ public static class Score {
   public static float matchingCardTimer;
   public static int matchingCardErrorCount;
   public static float wordScrambleTime;
+  public static float JigsawTime; 
   
 }
