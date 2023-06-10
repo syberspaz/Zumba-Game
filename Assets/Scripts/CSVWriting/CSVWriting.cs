@@ -27,14 +27,13 @@ public class CSVWriting : MonoBehaviour {
     if (instantiate) {
 
       tw = new StreamWriter(fileName, false);
-      tw.WriteLine("ID,Date,Find Me Time Average,Find Me Error Count,Matching Card Time,Matching Card Error Count,Word Scramble Time (-1 is a skip), Current Time");
+      tw.WriteLine("Find Me Time Average,Find Me Error Count,Matching Card Time,Matching Card Error Count,Word Scramble Time (-1 is a skip),Jigsaw Time,Current Time");
       tw.Close();
       instantiate = false;
     }
     tw = new StreamWriter(fileName, true);
 
-        tw.WriteLine(Score.ID + "," +
-          DateTime.Today + "," +
+          tw.WriteLine(
           Score.findMeTimeAverage + "," +
           Score.findMeErrorCount + "," +
           Score.matchingCardTimer + "," +

@@ -2945,6 +2945,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   beach: {fileID: 1131586817}
+  timer: 0
   goat: {fileID: 1884230329}
   toronto: {fileID: 1829740596}
   flowers: {fileID: 1758657518}
@@ -3837,7 +3838,6 @@ GameObject:
   - component: {fileID: 344070429}
   - component: {fileID: 344070428}
   - component: {fileID: 344070434}
-  - component: {fileID: 344070435}
   m_Layer: 5
   m_Name: C3
   m_TagString: Untagged
@@ -4008,19 +4008,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   kHand: {fileID: 291696639}
---- !u!114 &344070435
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 344070426}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 39bafe47b97b3a942b988ea37ad318f6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  kHand: {fileID: 0}
 --- !u!1 &345302366
 GameObject:
   m_ObjectHideFlags: 0
