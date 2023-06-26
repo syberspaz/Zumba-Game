@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 430593030}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 0.12076034, g: 0.1864365, b: 0.33524993, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1650,6 +1650,7 @@ GameObject:
   - component: {fileID: 181701025}
   - component: {fileID: 181701024}
   - component: {fileID: 181701023}
+  - component: {fileID: 181701026}
   m_Layer: 0
   m_Name: Manager
   m_TagString: Untagged
@@ -1729,6 +1730,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &181701026
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 181701022}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff96e3d143b84aa46b534544d872f9cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  increaseAmount: 0.017
+  increaseDuration: 120
+  maxFloatValue: 0
+  myFloat: 0
 --- !u!1001 &181978387
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9052,6 +9069,18 @@ PrefabInstance:
     - target: {fileID: 619816715998902980, guid: 6c5a4c81e1f741a4392d91dac10f1d9f, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 619816715998902981, guid: 6c5a4c81e1f741a4392d91dac10f1d9f, type: 3}
+      propertyPath: xInput
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 619816715998902981, guid: 6c5a4c81e1f741a4392d91dac10f1d9f, type: 3}
+      propertyPath: yInput
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 619816715998902981, guid: 6c5a4c81e1f741a4392d91dac10f1d9f, type: 3}
+      propertyPath: zInput
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 619816715998902982, guid: 6c5a4c81e1f741a4392d91dac10f1d9f, type: 3}
       propertyPath: m_RootOrder
