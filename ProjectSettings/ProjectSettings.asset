@@ -614,7 +614,7 @@ PlayerSettings:
   webGLDecompressionFallback: 0
   webGLPowerPreference: 2
   scriptingDefineSymbols:
-    Standalone: SOAR_HAS_URP
+    Standalone: SOAR_HAS_URP;SOAR_HAS_HDRP
   additionalCompilerArguments: {}
   platformArchitecture: {}
   scriptingBackend:
