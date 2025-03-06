@@ -14,7 +14,7 @@ Shader "Soar/SoarShaderURP"
         _AmbColor("Color", color) = (1., 1., 1., 1.)
 
         [Header(Diffuse)]
-        _Diffuse("Val", Range(0., 1.)) = 1.
+        _Diffuse("Val", Range(0., 10.)) = 1.
         _DifColor("Color", color) = (1., 1., 1., 1.)
 
     }
