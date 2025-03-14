@@ -16,9 +16,13 @@ public class FindMeManager : MonoBehaviour
   public GameObject target;
   public int count = 0;
 
-  float timer = 0;
+  public AudioSource audioSource;
+  public AudioClip correctSound;
+
+    float timer = 0;
   void Start() {
-    findMeObjectsEditable = new List<GameObject>(findMeObjects);
+        audioSource = GetComponent<AudioSource>();
+        findMeObjectsEditable = new List<GameObject>(findMeObjects);
     target = findMeObjectsEditable[Random.Range(0, findMeObjectsEditable.Count)];
     findMeObjectsEditable.Remove(target);
   }
@@ -32,13 +36,22 @@ public class FindMeManager : MonoBehaviour
       findMeObjectsEditable.Remove(target);
       timeList.Add(timer);
       timer = 0;
-    } else if (target.GetComponent<FindMeObject>().clicked) {
-      //RETURN ERROR COUNT FOR THIS ONE OBJECT AND THE TIME IT TOOK  
+
+            if (correctSound != null)
+            {
+                audioSource.PlayOneShot(correctSound);
+            }
+
+
+        } else if (target.GetComponent<FindMeObject>().clicked) {
+            //RETURN ERROR COUNT FOR THIS ONE OBJECT AND THE TIME IT TOOK  
+            ShakeText();
       float temp = 0;
       for (int i = 0; i < timeList.Count; i++) {
         temp += timeList[i];
       }
-      Score.findMeTimeAverage = temp/timeList.Count;
+            audioSource.PlayOneShot(correctSound);
+            Score.findMeTimeAverage = temp/timeList.Count;
       Score.findMeErrorCount = errorCount;
       SceneManager.LoadScene(Menu.Zumba);
     }
@@ -46,9 +59,33 @@ public class FindMeManager : MonoBehaviour
       if (findMeObjects[i].GetComponent<FindMeObject>().clicked) {
         errorCount++;
         findMeObjects[i].GetComponent<FindMeObject>().clicked = false;
-      }
+                ShakeText();
+            }
     }
     
   }
+    void ShakeText()
+    {
+        StartCoroutine(ShakeTextCoroutine());
+    }
+    IEnumerator ShakeTextCoroutine()
+    {
+        Vector3 originalPos = text.transform.position;
 
+        float shakeAmount = 10f;
+        float shakeDuration = 0.5f;
+
+        float elapsed = 0f;
+
+        while (elapsed < shakeDuration)
+        {
+            float xOffset = Random.Range(-shakeAmount, shakeAmount);
+            float yOffset = Random.Range(-shakeAmount, shakeAmount);
+            text.transform.position = new Vector3(originalPos.x + xOffset, originalPos.y + yOffset, originalPos.z);
+            elapsed += Time.deltaTime;
+            yield return null;
+        }
+
+        text.transform.position = originalPos; // Reset to original position after shake
+    }
 }
