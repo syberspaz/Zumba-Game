@@ -50,4 +50,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Zumba/Beach2.unity
     guid: 4b2b45ac0ffe94a4faf06c6a0afe4a41
+  - enabled: 1
+    path: Assets/Scenes/Zumba/ParkZumba2.unity
+    guid: 3f635537485462f488e1b0ee0b3ea8ae
+  - enabled: 1
+    path: Assets/Scenes/Zumba/SnowMountains2.unity
+    guid: 5cd5085e4c252a54280834c0c5b31a72
   m_configObjects: {}
