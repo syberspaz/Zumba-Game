@@ -35,20 +35,22 @@ public class FlipCard : MonoBehaviour, IPointerClickHandler {
         {
             back.SetActive(true);
         }
+
+        
         if (dist < rectTransform.rect.width / 2f)
         {
-            // kHand.updateSelection();
+            kHand.updateSelection();
+            
             if (kHand.handIsClosed && !isFront && !locked)
             {
                 cardManager.FlipCard(this.gameObject);
                 isFront = true;
                 isSelected = true;
             }
-
-
         }
+         
     }
-        public void OnPointerClick(PointerEventData pointerEventData)
+    public void OnPointerClick(PointerEventData pointerEventData)
         {
 
             if (pointerEventData.button == PointerEventData.InputButton.Left)
