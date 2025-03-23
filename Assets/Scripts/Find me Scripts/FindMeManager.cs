@@ -4,7 +4,6 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using UnityEngine.SceneManagement;
-using System.IO;
 
 public class FindMeManager : MonoBehaviour
 {
@@ -20,8 +19,6 @@ public class FindMeManager : MonoBehaviour
     public AudioSource audioSource;
     public AudioClip correctSound;
 
-    private string filePath;
-
     float timer = 0;
     void Start()
     {
@@ -29,8 +26,6 @@ public class FindMeManager : MonoBehaviour
         findMeObjectsEditable = new List<GameObject>(findMeObjects);
         target = findMeObjectsEditable[Random.Range(0, findMeObjectsEditable.Count)];
         findMeObjectsEditable.Remove(target);
-
-        filePath = Application.dataPath + "/MetricsTest.csv";
     }
     void Update()
     {
@@ -47,6 +42,7 @@ public class FindMeManager : MonoBehaviour
 
             if (correctSound != null)
             {
+                audioSource.Stop();
                 audioSource.PlayOneShot(correctSound);
             }
 
@@ -61,12 +57,10 @@ public class FindMeManager : MonoBehaviour
             {
                 temp += timeList[i];
             }
+            audioSource.Stop();
             audioSource.PlayOneShot(correctSound);
             Score.findMeTimeAverage = temp / timeList.Count;
             Score.findMeErrorCount = errorCount;
-
-            SaveMetricsToCSV();
-
             SceneManager.LoadScene(Menu.Zumba);
         }
         for (int i = 0; i < findMeObjects.Count; i++)
@@ -103,25 +97,5 @@ public class FindMeManager : MonoBehaviour
         }
 
         text.transform.position = originalPos; // Reset to original position after shake
-    }
-    void SaveMetricsToCSV()
-    {
-        string sceneName = SceneManager.GetActiveScene().name;
-        // Open or create the CSV file
-        using (StreamWriter writer = new StreamWriter(filePath, true))
-        {
-            // Check if the file is empty and write the headers
-            if (new FileInfo(filePath).Length == 0)
-            {
-                writer.WriteLine("Scene Name,Correct Answers,Error Count,Average Time");
-            }
-
-            // Write the metrics to the CSV file
-            writer.WriteLine($"{sceneName},{count},{errorCount},{Score.findMeTimeAverage}");
-
-
-            // Debug log to confirm the data is being written
-            Debug.Log("Metrics Saved to CSV: Scene: " + sceneName + ", Correct Answers: " + count + ", Error Count: " + errorCount + ", Average Time: " + Score.findMeTimeAverage);
-        }
     }
 }
