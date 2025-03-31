@@ -5735,15 +5735,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4885589653164333344, guid: 14a8890357cda9a448868a5b4923199a, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 166.94
+      value: 237.2
       objectReference: {fileID: 0}
     - target: {fileID: 4885589653164333344, guid: 14a8890357cda9a448868a5b4923199a, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 457.2804
+      value: 421.7
       objectReference: {fileID: 0}
     - target: {fileID: 4885589653164333345, guid: 14a8890357cda9a448868a5b4923199a, type: 3}
       propertyPath: m_overflowMode
-      value: 3
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4885589653164333345, guid: 14a8890357cda9a448868a5b4923199a, type: 3}
+      propertyPath: m_enableWordWrapping
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4885589653672348563, guid: 14a8890357cda9a448868a5b4923199a, type: 3}
       propertyPath: m_Name
