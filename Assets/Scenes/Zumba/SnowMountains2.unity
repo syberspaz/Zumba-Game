@@ -1955,8 +1955,8 @@ MonoBehaviour:
   - {fileID: 1531046635}
   - {fileID: 2101466956}
   - {fileID: 871847185}
-  nextScene: feffffff020000000300000004000000ffffffff0a000000
-  findMeScene: 4
+  nextScene: feffffff02000000030000000400000006000000ffffffff0c000000
+  findMeScene: 6
   currentSong: {fileID: 0}
   timer: 5
   text: {fileID: 1005602969}
