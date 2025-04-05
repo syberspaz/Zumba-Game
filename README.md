@@ -46,20 +46,24 @@ Main Game Scenes:
 - Zumba/SnowMountains2
 
 ## Notes of Zumba Capstone 2025:
-- As April, 2025. Soar Capture Suite can no longer be found on their webpage. With [this link](https://streamsoar.com/) only having a contact email.
+- As April, 2025. Soar Capture Suite can no longer be found on their webpage. With this like of [Soar Capture Suite](https://streamsoar.com/) only having a contact email.
+- In addition to the Azure Kinect dropping support in 2023, the documentation and support for this technology is very limited.
 - New Playlist 2, has been added with new recordings. However due to several technical issues: the new recordings are lower quality than last year.
 
 ### iPad mode: 
 Due to incompatibility with the Volumetric Models and packages like [Unity Render Streaming](https://docs.unity3d.com/Packages/com.unity.renderstreaming@3.1/manual/index.html)
 We are currently using AnyDesk as a 3rd party solution.
 
-For future iPad development with **Volumetric Models**.
-We would need to create two seperate games: 
+For future iPad development with current **Volumetric Models**.
+We would need to split the game into two seperate unity projects: 
 - Zumba Dance with Volumtric Models
 - Minigames
 
-Suggested Solution:
-I highly suggest we upgrade from using current Azure Kinect's Volumetric Models
+Suggested Solution for remote play "mirroring" with iPad:
+I highly suggest we upgrade from using current Azure Kinect's Volumetric Models.
+Due to Azure Kinect's Volumetric Models and how they are rendered in Unity.
+This causes some incompatibility issues and will crash the Unity Editor.
+No solution has been found yet for this problem.
 
 ## Zumba Game Notes
 Notes for Zumba minigames
