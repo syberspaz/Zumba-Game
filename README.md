@@ -1,9 +1,17 @@
 # Zumba-Game
  Zumba-Game MHSc thesis Ontario Shores 
 
+## Project Backup Link:
+I recommend making a backup of this just in case.
+Contains:
+- Full Project Backup
+- Zumba Dependencies
+- Builds
+[Full Google Drive Folder](https://drive.google.com/drive/folders/1AukuDvS9npfJWukepsk6qU5TNqTcMhy0?usp=sharing)
+
 Setup:
 - Clone this repository
-- Download Data (Not-In-Repo.7z) from [GoogleDrive](https://drive.google.com/drive/folders/1u5SAhtXQ-c0ODAziEnaqWvuReYmHQXM-?usp=share_link)
+- Download Data (Not-In-Repo) from [GoogleDrive](https://drive.google.com/drive/folders/1n_O-T5-DuQffEQpL_IYX3dzj7yEDTTIy?usp=sharing)
 - unzip this and copy them into the main repo directory
 - ensure the .dll's and the .onnx file are in the main project direcoty (same folder as the Zumba-Excergame.sln)
 - Add the repo directory to your Unity Hub, I've tested with Editor 2021.3.20f1
@@ -11,7 +19,7 @@ Setup:
 
 If you are having troubles, you may need to install:
 - the Azure Kinect SDK from [Link](https://github.com/microsoft/Azure-Kinect-Sensor-SDK/blob/develop/docs/usage.md)
-- the Azure Kinect Bodytracking SDK from [Link](https://learn.microsoft.com/en-us/azure/kinect-dk/body-sdk-download)
+- the Azure Kinect Bodytracking SDK from [Link](https://www.microsoft.com/en-us/download/details.aspx?id=101454)
 
 
 Debugging Kinect Scenes:
@@ -28,13 +36,34 @@ Main Game Scenes:
 - Minigames/Find Me/Island Find Me
 - Minigames/Find Me/New City
 - Minigames/Find Me/Park
+- Minigames/Find Me/Camping
+- Minigames/Find Me/HighWayCountry
 - Zumba/Beach
 - Zumba/Park Zumba
 - Zumba/SnowMountains
+- Zumba/Beach2
+- Zumba/Park Zumba2
+- Zumba/SnowMountains2
 
+## Notes of Zumba Capstone 2025:
+- As April, 2025. Soar Capture Suite can no longer be found on their webpage. With [this link](https://streamsoar.com/) only having a contact email.
+- New Playlist 2, has been added with new recordings. However due to several technical issues: the new recordings are lower quality than last year.
 
+### iPad mode: 
+Due to incompatibility with the Volumetric Models and packages like [Unity Render Streaming](https://docs.unity3d.com/Packages/com.unity.renderstreaming@3.1/manual/index.html)
+We are currently using AnyDesk as a 3rd party solution.
+
+For future iPad development with **Volumetric Models**.
+We would need to create two seperate games: 
+- Zumba Dance with Volumtric Models
+- Minigames
+
+Suggested Solution:
+I highly suggest we upgrade from using current Azure Kinect's Volumetric Models
+
+## Zumba Game Notes
 Notes for Zumba minigames
-1. These use volumetric video assets from the Soar Capture Suite.  You can find the documentation [here](https://www.streamsoar.com/documentation/unity-package)
+1. These use volumetric video assets from the Soar Capture Suite.  You can find the documentation [Dead Link](https://www.streamsoar.com/documentation/unity-package)
 2. you should ensure the following settings:
 * Select the **ModelMesh** object (this is the volumetric video asset) in the various "Songs"
 * in the **Volumetric Render (Script)** Component, Turn on **Enable Re Lighting ** and **Per Pixel Lighting**
