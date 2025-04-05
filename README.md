@@ -56,12 +56,12 @@ Main Game Scenes:
 Due to incompatibility with the Volumetric Models and packages like [Unity Render Streaming](https://docs.unity3d.com/Packages/com.unity.renderstreaming@3.1/manual/index.html)
 We are currently using AnyDesk as a 3rd party solution.
 
-For future iPad development with current **Volumetric Models**.
-We would need to split the game into two seperate unity projects: 
+For future iPad development with current **Volumetric Models**. We would need to split the game into two seperate unity projects: 
 - Zumba Dance with Volumtric Models
 - Minigames
 
 Suggested Solution for remote play "mirroring" with iPad:
+
 I highly suggest we upgrade from using current Azure Kinect's Volumetric Models.
 Due to Azure Kinect's Volumetric Models and how they are rendered in Unity.
 This causes some incompatibility issues and will crash the Unity Editor.
