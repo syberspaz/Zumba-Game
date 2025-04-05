@@ -48,7 +48,7 @@ public class ZumbaController : MonoBehaviour {
         if (songTimer <= 0 || Input.GetKeyDown(KeyCode.S)) {//when delay is finished
           Menu.song++;//boot next song for next load
           //if (Menu.song == findMeScene) {
-            int rand = Random.Range(6,10);
+            int rand = Random.Range(6,11);
             Debug.Log("memememememememeemememememememe:" + rand);
             nextScene[4] = rand;
             //SceneManager.LoadScene(rand);

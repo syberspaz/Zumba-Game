@@ -8,6 +8,8 @@ using UnityEngine;
 
 public class SkeletalTrackingProvider : BackgroundDataProvider
 {
+    public static bool IsKinectConnected = false;
+
     bool readFirstFrame = false;
     TimeSpan initialTimestamp;
 
@@ -40,6 +42,7 @@ public class SkeletalTrackingProvider : BackgroundDataProvider
                 });
 
                 UnityEngine.Debug.Log("Open K4A device successful. id " + id + "sn:" + device.SerialNum);
+                IsKinectConnected = true;
 
                 var deviceCalibration = device.GetCalibration();
 
