@@ -47,7 +47,8 @@ Main Game Scenes:
 - Zumba/SnowMountains2
 
 ## Notes of Zumba Capstone 2025:
-- As April, 2025. Soar Capture Suite can no longer be found on their webpage. With this like of [Soar Capture Suite](https://streamsoar.com/) only having a contact email.
+- As April, 2025. Soar Capture Suite can no longer be found on their webpage.
+- [Soar Capture Suite](https://streamsoar.com/) only having a contact email.
 - In addition to the Azure Kinect dropping support in 2023, the documentation and support for this technology is very limited.
 - New Playlist 2, has been added with new recordings. However due to several technical issues: the new recordings are lower quality than last year.
 
